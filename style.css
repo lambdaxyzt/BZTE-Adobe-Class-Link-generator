@@ -1,0 +1,164 @@
+@font-face {
+    font-family: roboto-regular;
+    src : url("font/roboto-regular.ttf")
+}
+
+@font-face {
+    font-family: vazir;
+    src : url("font/vazir.ttf")
+}
+
+
+* {
+    font-family: roboto-regular,vazir,sans-serif;
+    
+}
+
+table * {
+	user-select: none;
+}
+
+
+body {
+}
+
+hr {
+    margin: 20px;
+}
+
+table,.tfoot {
+    border-collapse: collapse;
+    margin: 0 auto;
+    max-width: 900px;
+    width: 80%;
+}
+
+tbody {
+}
+
+thead {
+    text-align: center;
+}
+
+th,td {
+    border: 1px solid black;
+    padding: 10px;
+    
+}
+
+td:first-child {
+    text-align: center;
+}
+
+tr {
+
+}
+
+thead tr {
+    color: white;
+    background-color: tomato;
+}
+
+tr:nth-child(2n) {
+    background-color:rgb(230, 230, 230);
+}
+
+table > caption {
+
+    font-size: 1.5rem;
+    margin: 20px;
+}
+
+
+a:visited {
+    color:blue;
+}
+
+a:hover {
+    color : red;
+}
+
+p.link {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.teacher-link {
+    text-decoration: none;
+    border-bottom: 3px blue solid;
+    padding: 1px;
+}
+
+.teacher-link:hover {
+    border-color: red;
+    color : red;
+}
+
+.teacher-link:active {
+    border-color: red;
+    color : red;
+}
+
+ul {
+    list-style: none;
+}
+
+.flex-link-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flex-link-item {
+    margin: 40px 30px;
+    width: 400px;
+    height:200px;
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.flex-link-item img {
+    width: 100%;   
+}
+
+
+.gradiant + img {
+    margin: 0;
+    position: absolute;
+    bottom:0;
+}
+
+.gradiant {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 80%);
+    background-size: 100% 180%;
+    background-position: 0% -0.1%;
+    bottom:0;
+    z-index: 10;
+    transition:background-position 0.5s ease ;
+}
+
+.text {
+    font-size: 1.5em;
+    color: rgb(230, 230, 230,0);
+    transition: color 0.5s ease ;
+    padding: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index:11;
+    pointer-events:none;
+}
+
+.gradiant:hover {
+    background-position: 0% 80%;
+}
+
+.gradiant:hover ~ .text {
+    color: rgb(255, 255, 255,1);
+    
+}
